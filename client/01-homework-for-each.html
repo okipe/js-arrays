@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+    <style>
+        html {
+            font-family: arial, sans-serif;
+            background-color: gainsboro;
+        }
+        li {
+            list-style: none;
+        }
+    </style>
+<body>
+    <h1>Tareas para el inicio de mañana</h1>
+    <div id="app"></div>
+    <script>
+        const tasks =  [
+            { 'description': 'Aseo personal', minutes: 20, status: true },
+            { 'description': 'Cambio de ropa', minutes: 15, status: true },
+            { 'description': 'Preparar desayuno', minutes: 10, status: false },
+            { 'description': 'Tomar desayuno', minutes: 20, status: false },
+            { 'description': 'Transporte público hacia el trabajo', minutes: 60, status: false }
+        ];
+        
+        const app = document.getElementById('app');
+
+        // Usamos forEach para iterar a través de cada tarea en el array "tasks", utilizando una función flecha. 
+        tasks.forEach (task => {
+            if (task.status == true) {
+                // Dentro de la función de flecha, agregamos un nuevo elemento "li" al "innerHTML" de "app". Está checked
+                app.innerHTML += `<li><input type="checkbox" checked> ${task.description} - ${task.minutes} minutos</li>`;
+            } else {
+                app.innerHTML += `<li><input type="checkbox"> ${task.description} - ${task.minutes} minutos</li>`;
+            }
+        })
+
+        /* Más breve pero falta entenderlo mejor
+        tasks.forEach (task => {
+            app.innerHTML += `<li>`+(task.status==true?`<input type="checkbox" checked>`:`<input type="checkbox">`)+` ${task.description} - ${task.minutes} minutos</li>`;
+        }); */
+        
+
+        
+    </script>
+</body>
+</html>
