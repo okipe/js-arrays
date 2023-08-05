@@ -43,7 +43,18 @@
             app.innerHTML += `<li>`+(task.status==true?`<input type="checkbox" checked>`:`<input type="checkbox">`)+` ${task.description} - ${task.minutes} minutos</li>`;
         }); */
         
+        /* // Versión en for
+        for (let i = 0; i < tasks.length; i++) {
+            let task = tasks[i];
+            if (task.status == true) {
+                app.innerHTML += `<li><input type="checkbox" checked> ${task.description} - ${task.minutes} minutos</li>`;
+            } else {
+                app.innerHTML += `<li><input type="checkbox"> ${task.description} - ${task.minutes} minutos</li>`;
+            }
+}
 
+
+        */
         
     </script>
 </body>
