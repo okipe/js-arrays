@@ -1,5 +1,6 @@
 const items = [1, 3, 2, 3, 3, 1, 10];
 
+// Usamos reduce para contar la frecuencia de cada número en el arreglo: acumulador e ítem
 const rpta1 = items.reduce((obj, item) => {
     // Si no lo encuentro, le asigno 1
     if (!obj[item]) {
@@ -11,7 +12,7 @@ const rpta1 = items.reduce((obj, item) => {
 }, {});
 
 console.log(rpta1);
-// { 1: 1, 2: 1, 3: 2 }
+// { '1': 2, '2': 1, '3': 2 }
 
 const data = [
     {
