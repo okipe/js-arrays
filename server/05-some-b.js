@@ -21,6 +21,7 @@ const newAppointment = {
     endDate: new Date(2021, 1, 1, 9, 30),
 }
 
+// Se usa una librería `areIntervalsOverlapping` desde date-fns.org
 const areIntervalsOverlapping = require('date-fns/areIntervalsOverlapping');
 
 const isOverlap = (newDate) => {

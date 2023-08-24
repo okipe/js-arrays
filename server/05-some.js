@@ -12,9 +12,17 @@ for (let index = 0; index < numbers.length; index++) {
 
 console.log('con For: ', rpta1);
 
+/* CONSOLE ***************
+con For:  true
+***********************/
+
 // Usando SOME
 const rpta2 = numbers.some(item => item % 2 === 0);
 console.log('con Some: ', rpta2);
+
+/* CONSOLE ***************
+con Some:  true
+***********************/
 
 // OTRO EJEMPLO
 
@@ -48,3 +56,7 @@ const orders = [
 
 const rpta3 = orders.some(item => item.delivered);
 console.log('Respuesta 3: ', rpta3);
+
+/* CONSOLE ***************
+Respuesta 3:  true
+***********************/
